@@ -9,7 +9,7 @@ import json
 import pandas as pd
 
 st.set_page_config(
-    page_title="moodmix",
+    page_title="MusicMood",
     page_icon="🎶",
     layout="wide"
 )
@@ -767,7 +767,18 @@ def main():
                 unsafe_allow_html=True
             )
 
+            ###--- Hide Streamlit footer---###
 
+#--------------------------------------------------------------------
+            hide_st_style = """
+            <style>
+            MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+             """
+st.markdown(hide_st_style, unsafe_allow_html=True)
+#--------------------------------------------------------------------
 
 
 if __name__ == "__main__":
